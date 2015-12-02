@@ -273,7 +273,7 @@ JS=build_tools/spidermonkey/js
 
 $(JS): build_tools/.spidermonkey_version
 	rm -rf build_tools/spidermonkey build_tools/jsshell*
-	wget -P build_tools -N https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/$(SPIDERMONKEY_VERSION)-candidates/build1/jsshell-$(PLATFORM).zip
+	wget -P build_tools -N https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-esr38/jsshell-$(PLATFORM).zip
 	unzip -o -d build_tools/spidermonkey build_tools/jsshell-$(PLATFORM).zip
 	chmod +x build_tools/spidermonkey/*
 	touch $(JS)
